@@ -94,14 +94,19 @@ npm install
 Cek log error di Vercel Dashboard → Deployments → View Build Logs
 
 ### Error: "Found invalid Node.js Version"
-Pastikan Node.js version di vercel.json sudah diatur dengan benar (misal: 20.x):
+Untuk mengatur versi Node.js di Vercel, gunakan cara berikut:
+
+**Cara 1: Melalui Vercel Dashboard**
+1. Buka project di Vercel Dashboard
+2. Pergi ke Settings → Functions
+3. Set Node.js Version ke 20.x
+
+**Cara 2: Melalui package.json**
+Tambahkan di package.json:
 ```json
 {
-  "functions": {
-    "api/*.js": {
-      "runtime": "@vercel/node@3.0.0",
-      "nodeVersion": "20.x"
-    }
+  "engines": {
+    "node": "20.x"
   }
 }
 ```
