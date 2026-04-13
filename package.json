@@ -2,7 +2,6 @@
   "name": "barcode-qrcode-generator",
   "version": "1.0.0",
   "description": "REST API untuk generate QR Code dan Barcode menggunakan Node.js serverless (Vercel)",
-  "main": "index.js",
   "type": "module",
   "engines": {
     "node": "20.x"

@@ -111,6 +111,9 @@ Tambahkan di package.json:
 }
 ```
 
+### Error: "No entrypoint found"
+Pastikan package.json tidak memiliki field "main" yang tidak perlu. Hapus field "main" jika ada.
+
 ### API tidak merespons
 Pastikan endpoint di folder `api/` dan menggunakan export default function
 
