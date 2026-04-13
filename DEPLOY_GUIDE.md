@@ -93,6 +93,19 @@ npm install
 ### Error: "Build failed"
 Cek log error di Vercel Dashboard → Deployments → View Build Logs
 
+### Error: "Found invalid Node.js Version"
+Pastikan Node.js version di vercel.json sudah diatur dengan benar (misal: 20.x):
+```json
+{
+  "functions": {
+    "api/*.js": {
+      "runtime": "@vercel/node@3.0.0",
+      "nodeVersion": "20.x"
+    }
+  }
+}
+```
+
 ### API tidak merespons
 Pastikan endpoint di folder `api/` dan menggunakan export default function
 
